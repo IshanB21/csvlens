@@ -3000,6 +3000,7 @@ mod tests {
     }
 
     #[test]
+    #[ignore = "requires a system clipboard; unavailable in headless CI/containers"]
     fn test_copy_selection_crlf() {
         // Skip test in CI environments where clipboard is not available
         if std::env::var("CI").is_ok() {
